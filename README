@@ -1,0 +1,26 @@
+Instalando 
+
+Instalando un entorno virtual (virtualenv)
+
+    $ sudo apt-get install python-virtualenv
+    $ mkdir environment
+    $ mkdir project
+    $ cd environment
+    $ virtualenv fsd
+
+Creando el proyecto 
+    $ cd ../project
+    $ django-admin.py startproject fsd
+    $ cd fsd
+
+Creando un app 
+
+    $ python manage.py startapp university
+    $ cd university
+
+Creando un archivo para manejar las dependencias (requirement.txt) y dentro de él poner
+
+    django
+    djangoajax
+
+
