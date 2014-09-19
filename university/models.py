@@ -64,7 +64,7 @@ class Office(models.Model):
     location = models.SlugField(_('location'))
 
     def __str__(self):
-        return self.title
+        return self.location
        
     class Meta:
         verbose_name = _("Instructor office")

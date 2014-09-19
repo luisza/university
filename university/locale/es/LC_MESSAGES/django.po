@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-19 03:31+0000\n"
+"POT-Creation-Date: 2014-09-19 06:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,90 +18,110 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: university/admin.py:14
+#, fuzzy
+#| msgid "Photo"
+msgid "Photo image"
+msgstr "Foto"
+
+#: university/admin.py:20
+#, fuzzy
+#| msgid "credits"
+msgid "Credits"
+msgstr "Créditos"
+
+#: university/admin.py:31
+msgid "Ok, User unsubscribe"
+msgstr "Ok, desinscribiendo Usuario"
+
+#: university/admin.py:32
+msgid "Unsubscribe Students"
+msgstr "Desinscribir Estudiante"
+
 #: university/apps.py:7
 msgid "University"
 msgstr "Universidad"
 
-#: university/models.py:8 university/models.py:17
+#: university/models.py:10 university/models.py:23
 msgid "User"
 msgstr "Usuario"
 
-#: university/models.py:9
+#: university/models.py:11
 msgid "Enrollment Date"
 msgstr "Fecha de Inscripción"
 
-#: university/models.py:10
+#: university/models.py:12
 msgid "Photo"
 msgstr "Foto"
 
-#: university/models.py:13
+#: university/models.py:18
 msgid "Student"
 msgstr "Estudiante"
 
-#: university/models.py:14 university/models.py:39
+#: university/models.py:19 university/models.py:53
 msgid "Students"
 msgstr "Estudiantes"
 
-#: university/models.py:18
+#: university/models.py:24
 msgid "Hire Date"
 msgstr "Fecha de registro"
 
-#: university/models.py:19
+#: university/models.py:25
 msgid "Office"
 msgstr "Oficina"
 
-#: university/models.py:20 university/models.py:32
+#: university/models.py:26 university/models.py:45
 msgid "Departament"
 msgstr "Departamento"
 
-#: university/models.py:23 university/models.py:38
+#: university/models.py:32 university/models.py:52
 msgid "Instructor"
 msgstr "Profesor"
 
-#: university/models.py:24
+#: university/models.py:33
 msgid "Instructors"
 msgstr "Profesores"
 
-#: university/models.py:27
+#: university/models.py:37
 msgid "Name"
 msgstr "Nombre"
 
-#: university/models.py:28
+#: university/models.py:38
 msgid "Budget"
 msgstr "Presupuesto"
 
-#: university/models.py:29
+#: university/models.py:39
 msgid "Start Date"
 msgstr "Fecha de inicio"
 
-#: university/models.py:33
+#: university/models.py:46
 msgid "Departaments"
 msgstr "Departamentos"
 
-#: university/models.py:36
+#: university/models.py:50
 msgid "title"
 msgstr "Título"
 
-#: university/models.py:37
+#: university/models.py:51
 msgid "credits"
 msgstr "Créditos"
 
-#: university/models.py:42
+#: university/models.py:59
 msgid "Course"
 msgstr "Curso"
 
-#: university/models.py:43
+#: university/models.py:60
 msgid "Courses"
 msgstr "Cursos"
 
-#: university/models.py:46
+#: university/models.py:64
 msgid "location"
 msgstr "Localización"
 
-#: university/models.py:49
+#: university/models.py:70
 msgid "Instructor office"
 msgstr "Oficina del profesor"
 
-#: university/models.py:50
+#: university/models.py:71
 msgid "Instructor offices"
 msgstr "Oficinas de profesores"
