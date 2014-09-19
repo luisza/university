@@ -9,6 +9,7 @@ Instalando un entorno virtual (virtualenv)
     $ virtualenv fsd
 
 Creando el proyecto 
+
     $ cd ../project
     $ django-admin.py startproject fsd
     $ cd fsd
@@ -23,4 +24,13 @@ Creando un archivo para manejar las dependencias (requirement.txt) y dentro de √
     django
     djangoajax
 
+Creando los modelos de la base de datos
 
+    $ cd ..
+	$ python manage.py makemigrations university
+    $ python manage.py migrate
+    
+Creo un usuario administrador (m√©todo en des-uso)
+
+    $ python manager.py syncdb
+    
