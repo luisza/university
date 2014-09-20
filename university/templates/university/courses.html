@@ -1,0 +1,10 @@
+
+<ul>
+{% for course in courses %}
+	<li> {{course}} <span> 
+	   <a data-href="{%url 'enroll' course.pk%}"
+	      data-ajax="true" >Matricular </a></span></li>
+{%endfor%}
+</ul>
+
+
