@@ -1,0 +1,16 @@
+{% extends 'university/index.html'  %}
+
+{%block content %}
+
+<h1> {{object}}</h1>
+
+<ul>
+{%for course in object.course_set.all%}
+	<li> <p > {{forloop.counter}} -)
+	     {{course.title}} <span class="pull-rigth"> credits {{course.credits}} </span></p> <p>{{course.instructor}}</p></li> 
+	{%empty%}
+	<li> No tiene cursos </li>
+{%endfor%}	
+</ul>
+
+{%endblock%}
