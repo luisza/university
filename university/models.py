@@ -9,7 +9,7 @@ from django.utils.encoding import python_2_unicode_compatible
 class Student(models.Model):
     user = models.OneToOneField(User, related_name='student_of', verbose_name=_('User'))
     enrollment_date = models.DateField(_('Enrollment Date'),auto_now_add=True)
-    photo = models.ImageField(_('Photo'), upload_to='students')
+    photo = models.ImageField(_('Photo'), upload_to='students', null=True)
      
     def __str__(self):
         return self.user.get_full_name()
