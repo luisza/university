@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 class Student(models.Model):
     user = models.OneToOneField(User, related_name='student_of')
     enrollment_date = models.DateField(auto_now_add=True)
-    photo = models.ImageField(upload_to='students', width_field=413, height_field=531)
+    photo = models.ImageField(upload_to='students', null=True)
      
 
 class Instructor(models.Model):
