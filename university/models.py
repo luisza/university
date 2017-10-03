@@ -13,7 +13,7 @@ class Student(models.Model):
 
      
     def __str__(self):
-        return self.user.get_full_name()
+        return self.user.username +" "+self.user.get_full_name()
     
     class Meta:
         verbose_name = _('Student')
@@ -27,7 +27,7 @@ class Instructor(models.Model):
     departament = models.ForeignKey('Departament', verbose_name=_('Departament'))
     
     def __str__(self):
-        return self.user.get_full_name()
+        return self.user.username +" "+self.user.get_full_name()
     
     class Meta:
         verbose_name = _('Instructor')
