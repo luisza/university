@@ -1,8 +1,8 @@
-
+{% load static %} 
 <html>
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.min.css">
+		<link rel="stylesheet" href="{% static '/css/bootstrap.min.css' %}">
 	</head>
 	
 	<body>
@@ -21,9 +21,8 @@
 			{%endblock%}
 
 		</div>
-		
-		
 	</body>
 	{%block script%}
 	{%endblock%}
 </html>
+
