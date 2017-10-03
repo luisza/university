@@ -49,5 +49,5 @@ Creando traducciones para múltiples idiomas
 
 Para traducir el nombre de los apps hay que crear un manejador de apps, ver apps.py y __init__.py
 Para ver como Django hace reconocimiento automático de lenguaje recomiendo leer la documentacion.
-https://docs.djangoproject.com/en/1.7/topics/i18n/translation/
+https://docs.djangoproject.com/en/1.11/topics/i18n/translation/
 
