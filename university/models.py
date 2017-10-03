@@ -8,6 +8,7 @@ class Student(models.Model):
     user = models.OneToOneField(User, related_name='student_of', verbose_name=_('User'))
     enrollment_date = models.DateField(_('Enrollment Date'),auto_now_add=True)
     photo = models.ImageField(_('Photo'), upload_to='students', width_field=413, height_field=531)
+
      
     class Meta:
         verbose_name = _('Student')
