@@ -122,7 +122,3 @@ MEDIA_URL = '/media/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 STATIC_MEDIA = os.path.join(BASE_DIR, 'media/')
 
-LOCALE_PATHS = (os.path.join(BASE_DIR, 'locale'),
-                os.path.join(BASE_DIR, 'university/locale'), # es un hack, esto no debe ir
-                )
-
