@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
-
+from django.utils.safestring import mark_safe
 from university.models import Student, Instructor, Course, Departament, Office
 
 class Student_Admin(admin.ModelAdmin):
@@ -10,7 +10,7 @@ class Student_Admin(admin.ModelAdmin):
     list_per_page = 10
 
     def view_foto(self, obj):
-        return '<img src="%s" width="40px" height="50px"/>' % obj.photo.url
+        return mark_safe('<img src="%s" width="40px" height="50px"/>' % obj.photo.url)
     view_foto.short_description = _("Photo image")
     view_foto.allow_tags = True
     

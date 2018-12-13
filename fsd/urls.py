@@ -1,4 +1,4 @@
-from django.conf.urls import include, url
+from django.urls import path, include
 from django.contrib import admin
 from django.conf.urls.static import static
 from django.conf import settings
@@ -8,8 +8,8 @@ urlpatterns = [
     # url(r'^$', 'fsd.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^university/', include('university.urls')),
+    path('university/', include('university.urls')),
+    path('admin/',  admin.site.urls) ,
 
 ]
 
