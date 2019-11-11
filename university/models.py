@@ -20,12 +20,20 @@ class Departament(models.Model):
     budget = models.FloatField()
     start_date = models.DateField(auto_now_add=True)
 
+    class Meta: 
+        indexes = [
+            models.Index(fields=['name', 'budget']),
+        ]
 
 class Course(models.Model):
     title = models.CharField(max_length=500)
     credits = models.IntegerField(default=4)
     instructor = models.ForeignKey(Instructor, on_delete=models.CASCADE)
     students = models.ManyToManyField(Student)
+
+    class Meta:
+        ordering = ['-title']
+ 
     
 class Office(models.Model):
     location = models.SlugField()
