@@ -31,18 +31,21 @@ class Departament(models.Model):
     class Meta:
         verbose_name = _('Departament')
         verbose_name_plural = _('Departaments')  
-
+        indexes = [
+            models.Index(fields=['name', 'budget']),
+        ]
+ 
 class Course(models.Model):
-    title = models.CharField(_('title'), max_length=500)
-    credits = models.IntegerField(_('credits'), default=4)
-    instructor = models.ForeignKey(Instructor, on_delete=models.CASCADE, verbose_name=_('Instructor'))
-    students = models.ManyToManyField(Student, verbose_name=_('Students'))
-
+    title = models.CharField(max_length=500)
+    credits = models.IntegerField(default=4)
+    instructor = models.ForeignKey(Instructor, on_delete=models.CASCADE)
+    students = models.ManyToManyField(Student)
     
     class Meta:
         verbose_name = _('Course')
         verbose_name_plural = _('Courses')   
-           
+        ordering = ['-title']
+
 class Office(models.Model):
     location = models.SlugField(_('location'))
     
