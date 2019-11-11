@@ -6,7 +6,7 @@ Instalando un entorno virtual (virtualenv)
     $ mkdir environment
     $ mkdir project
     $ cd environment
-    $ virtualenv fsd
+    $ virtualenv -p python3 fsd
 
 Creando el proyecto 
 
@@ -22,6 +22,7 @@ Creando un app
 Creando un archivo para manejar las dependencias (requirement.txt) y dentro de él poner
 
     django
+    Pillow
     djangoajax
 
 Creando los modelos de la base de datos
@@ -32,5 +33,5 @@ Creando los modelos de la base de datos
     
 Creo un usuario administrador (método en des-uso)
 
-    $ python manager.py syncdb
+    $ python manager.py createsuperuser
     
