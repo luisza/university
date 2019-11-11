@@ -6,7 +6,7 @@ Instalando un entorno virtual (virtualenv)
     $ mkdir environment
     $ mkdir project
     $ cd environment
-    $ virtualenv fsd
+    $ virtualenv -p python3 fsd
 
 Creando el proyecto 
 
@@ -22,6 +22,7 @@ Creando un app
 Creando un archivo para manejar las dependencias (requirement.txt) y dentro de él poner
 
     django
+    Pillow
     djangoajax
 
 Creando los modelos de la base de datos
@@ -32,7 +33,7 @@ Creando los modelos de la base de datos
     
 Creo un usuario administrador (método en des-uso)
 
-    $ python manager.py syncdb
+    $ python manager.py createsuperuser
     
 
 Creando traducciones para múltiples idiomas 
@@ -49,5 +50,13 @@ Creando traducciones para múltiples idiomas
 
 Para traducir el nombre de los apps hay que crear un manejador de apps, ver apps.py y __init__.py
 Para ver como Django hace reconocimiento automático de lenguaje recomiendo leer la documentacion.
-https://docs.djangoproject.com/en/1.11/topics/i18n/translation/
+https://docs.djangoproject.com/en/2.2/topics/i18n/translation/
 
+
+Creando mezclas de migraciones.
+
+En ciertas ocaciones se requiere mezclar las migraciones para que una migración creada en un branch,
+funcione con otra de otro branch, así si dos desarrolladores hacen cambios a la base de datos, se 
+pueda fucionar sus cambios e integrarlos.
+
+    $ python manage.py makemigrations --merge

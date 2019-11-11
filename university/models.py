@@ -44,7 +44,10 @@ class Departament(models.Model):
     class Meta:
         verbose_name = _('Departament')
         verbose_name_plural = _('Departaments')  
-
+        indexes = [
+            models.Index(fields=['name', 'budget']),
+        ]
+ 
 @python_2_unicode_compatible  
 class Course(models.Model):
     title = models.CharField(_('title'), max_length=500)
@@ -54,13 +57,13 @@ class Course(models.Model):
 
     def __str__(self):
         return self.title
-
-    
+ 
     class Meta:
         verbose_name = _('Course')
-        verbose_name_plural = _('Courses')   
+        verbose_name_plural = _('Courses')
+        ordering = ['-title']
 
-@python_2_unicode_compatible          
+@python_2_unicode_compatible  
 class Office(models.Model):
     location = models.SlugField(_('location'))
 
