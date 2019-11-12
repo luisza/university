@@ -14,8 +14,8 @@
 {%block script%}
 {% load staticfiles %}
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script type="text/javascript" src="{% static 'django_ajax/js/jquery.ajax.min.js' %}"></script>
-<script type="text/javascript" src="{% static 'django_ajax/js/jquery.ajax-plugin.min.js' %}"></script>
+<script type="text/javascript" src="{% static '/js/jquery.ajax.min.js' %}"></script>
+<script type="text/javascript" src="{% static '/js/jquery.ajax-plugin.min.js' %}"></script>
 <script type="text/javascript">
     ajaxGet("{%url 'courses'%}", function(content){ });
 </script>
