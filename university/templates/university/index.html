@@ -10,8 +10,10 @@
 		<nav class="navbar navbar-default   ">
 			<div class="container">
 				<ul class="nav navbar-nav navbar-right">
+					{% if object %}
 					<li > <a class="btn btn-sm" href="{%url 'course_list' object.pk %}"> Cursos</a> </li>
 					{#<li > <a href="{%url 'enrollment' object.pk %}"> Matricula</a> </li>#}
+					{% endif %}
 				</ul>
 		   </div>
 		</nav>

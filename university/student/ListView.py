@@ -1,10 +1,14 @@
 from django.views.generic import DetailView
 from university.models import Student
 from django.shortcuts import redirect, get_object_or_404
+from django.views.generic.list import ListView
 
-# https://docs.djangoproject.com/en/1.11/ref/class-based-views/generic-display/
-# https://docs.djangoproject.com/en/1.11/ref/class-based-views/generic-editing/
 
+# https://docs.djangoproject.com/en/2.2/ref/class-based-views/
+# https://docs.djangoproject.com/en/2.2/ref/class-based-views/generic-editing/
+
+
+# https://docs.djangoproject.com/en/2.2/ref/class-based-views/generic-display/#detailview
 class Student_Course(DetailView):
     model = Student
     
@@ -21,3 +25,7 @@ class Student_Course(DetailView):
         return query.filter(user=self.request.user)
         
 
+# https://docs.djangoproject.com/en/2.2/ref/class-based-views/generic-display/#listview
+class StudentList(ListView):
+    model = Student
+    paginate_by = 20

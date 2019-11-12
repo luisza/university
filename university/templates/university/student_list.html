@@ -1,0 +1,29 @@
+{% extends 'university/index.html' %}
+
+{%block content %}
+<ul>
+{% for obj in object_list %}
+    <li ><a href="{% url 'course_list' obj.pk %}"> {{ obj }} </a> </li>
+{% endfor %}
+</ul>
+
+<hr>
+
+<div class="pagination">
+        <span class="step-links">
+            {% if page_obj.has_previous %}
+                <a href="?page=1">&laquo; inicio</a>
+                <a href="?page={{ page_obj.previous_page_number }}">anterior</a>
+            {% endif %}
+    
+            <span class="current">
+                Página {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}.
+            </span>
+    
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}">Siguiente</a>
+                <a href="?page={{ page_obj.paginator.num_pages }}">último &raquo;</a>
+            {% endif %}
+        </span>
+ </div>
+{%endblock%}
