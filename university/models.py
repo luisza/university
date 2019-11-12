@@ -1,11 +1,9 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils.translation import ugettext_lazy as _
-from django.utils.encoding import python_2_unicode_compatible
-
 # https://docs.djangoproject.com/en/dev/ref/models/fields/
 
-@python_2_unicode_compatible
+
 class Student(models.Model):
     user = models.OneToOneField(User, related_name='student_of', verbose_name=_('User'), on_delete=models.CASCADE)
     enrollment_date = models.DateField(_('Enrollment Date'), auto_now_add=True)
@@ -18,7 +16,7 @@ class Student(models.Model):
         verbose_name = _('Student')
         verbose_name_plural = _('Students')  
         
-@python_2_unicode_compatible        
+      
 class Instructor(models.Model):
     user = models.OneToOneField(User, related_name='instructor_of', on_delete=models.CASCADE, verbose_name=_('User'))
     hire_date = models.DateField(_('Hire Date'), auto_now_add=True)
@@ -32,7 +30,7 @@ class Instructor(models.Model):
         verbose_name = _('Instructor')
         verbose_name_plural = _('Instructors')  
 
-@python_2_unicode_compatible    
+  
 class Departament(models.Model):
     name = models.CharField(_('Name'), max_length=500)
     budget = models.FloatField(_('Budget'))
@@ -44,8 +42,11 @@ class Departament(models.Model):
     class Meta:
         verbose_name = _('Departament')
         verbose_name_plural = _('Departaments')  
+        indexes = [
+            models.Index(fields=['name', 'budget']),
+        ]
+ 
 
-@python_2_unicode_compatible  
 class Course(models.Model):
     title = models.CharField(_('title'), max_length=500)
     credits = models.IntegerField(_('credits'), default=4)
@@ -54,13 +55,13 @@ class Course(models.Model):
 
     def __str__(self):
         return self.title
-
-    
+ 
     class Meta:
         verbose_name = _('Course')
-        verbose_name_plural = _('Courses')   
+        verbose_name_plural = _('Courses')
+        ordering = ['-title']
 
-@python_2_unicode_compatible          
+
 class Office(models.Model):
     location = models.SlugField(_('location'))
 
