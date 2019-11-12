@@ -60,3 +60,21 @@ funcione con otra de otro branch, así si dos desarrolladores hacen cambios a la
 pueda fucionar sus cambios e integrarlos.
 
     $ python manage.py makemigrations --merge
+
+
+Para ejecutar el simulador de datos debe correr el siguiente comando:
+
+    $ python simulador.py
+
+Además puede extraer la información de la base de datos creando un respaldo en json:
+
+    $ python manage.py dumpdata university auth.User > university_data.json
+
+En caso de requerise importar los datos sobre una base de datos no limpia y que no tiene datos 
+de importancia se puede ejecutar.
+
+    $ python manage.py flush
+
+Para importar datos desde el archivo generado con dumpdata se ejecuta 
+
+    $ python manage.py loaddata university_data.json
